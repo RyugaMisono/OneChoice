@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <style>
         header {
-            background-image: "img/header.jpg";
+            background-image: url("img/header.jpg");
             background-size: cover;
             background-position: center;
             padding: 20px;
@@ -38,21 +38,21 @@
     <section id="launch-screen">
         <div class="container">
             <h2>留学相談を始める</h2>
-            <form action="/LaunchScreen" method="post" class="form">
+            <form action="/home" method="post" class="form">
                 <label for="name">名前:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="匿名の場合は匿名" required>
                 
                 <label for="email">メールアドレス:</label>
                 <input type="email" id="email" name="email" required>
                 
                 <label for="country">留学先:</label>
-                <input type="text" id="country" name="country" required>
+                <input placeholder="国名、州など" type="text" id="country" name="country" required>
                 
                 <label for="duration">留学の期間:</label>
-                <input type="text" id="duration" name="duration" required>
+                <input placeholder="短期、長期など。未定の場合未定" type="text" id="duration" name="duration" required>
                 
                 <label for="study_type">留学のタイプ:</label>
-                <input type="text" id="study_type" name="study_type" required>
+                <input placeholder="勉学、語学、スポーツなど" type="text" id="study_type" name="study_type" required>
                 
                 <input type="submit" value="留学相談を始める" class="submit-btn">
             </form>

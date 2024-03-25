@@ -11,9 +11,9 @@ advisors = [
 
 @app.route('/')
 def home():
-    return render_template('HomePage.html')
+    return render_template('home.html')
 
-@app.route('/LaunchScreen', methods=['GET', 'POST'])
+@app.route('/home', methods=['GET', 'POST'])
 def launch_screen():
     if request.method == 'POST':
         # フォームからの入力を取得
@@ -28,8 +28,8 @@ def launch_screen():
         # マッチングされたアドバイザーをフィルタリングする例 (ここでは単純に国に基づいてフィルタリング)
         matched_advisors = [advisor for advisor in advisors if advisor['specialization'].lower().find(country.lower()) != -1]
         
-        return render_template('MatchingPage.html', advisors=matched_advisors)
-    return render_template('LaunchScreen.html')
+        return render_template('matching.html', advisors=matched_advisors)
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

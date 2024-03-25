@@ -4,15 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>留学相談プラットフォーム</title>
-    <link rel="stylesheet" href="styles/style.css"> <!-- スタイルシートのリンク -->
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        header {
+            background-image: url("img/header.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .header-title {
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
+            <a href="/main.html"><img src="img/logo_transparent.png" alt="ロゴ" class="logo"></a>
             <h1>留学相談プラットフォーム</h1>
             <p class="tagline">海外進学を１つの選択肢に</p>
         </div>
     </header>
+    <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
     <section id="main-content">
         <div class="container">

@@ -1,0 +1,75 @@
+.first-text-fade-in {
+    animation: firstTextFadeIn 1s ease-in-out forwards;
+    opacity: 0;
+    font-size: 82px;
+    font-family: "Noto Sans CJK JP", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    bottom: 300px;
+    right: 150px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.second-text-fade-in {
+    animation: secondTextFadeIn 1s ease-in-out forwards;
+    opacity: 0;
+    font-size: 82px;
+    font-family: "Noto Sans CJK JP", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    bottom: 205px;
+    right: 150px;
+    text-shadow: 2px 2px 10px black;
+}
+
+@keyframes firstTextFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes secondTextFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.background-fade-in {
+    animation: backgroundFadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes backgroundFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.top-message .background-fade-in{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 64px);
+}

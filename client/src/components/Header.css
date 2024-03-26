@@ -1,0 +1,15 @@
+.header {
+    height: 64px;
+    width: 80%;
+    max-width: 1120px;
+    padding: 0 24px 0 24px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.right-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

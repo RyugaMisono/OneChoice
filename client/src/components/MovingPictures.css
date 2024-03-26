@@ -1,0 +1,19 @@
+.movingPictures{
+    height: 452px;
+    padding: 16px 0 16px 0;
+    background-color: #3C4856;
+    background-image: url("/home/joma/dev/onechoice/img/header.jpg");
+    background-size: contain;
+}
+
+.centeredCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.consulButton{
+    display: flex;
+    justify-content: center;
+}

@@ -1,3 +1,8 @@
 .main-contents{
-    margin-top: calc(100vh - 64px);
+    max-width: 1120px;
+    margin: 100vh auto 0 auto;
+}
+
+.body{
+    font-size: 16px;
 }

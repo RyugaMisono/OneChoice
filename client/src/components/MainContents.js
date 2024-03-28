@@ -24,6 +24,7 @@ function MainContents() {
             </div>
             <div className="how-to">
                 <Typography variant="h4" fontWeight="bold" className="how-to-text">利用の流れ</Typography>
+                <div className="how-to-img"></div>
                 <div className="flex-text">
                     <span className="each-text">
                     <Typography variant="h6" fontWeight="bold">プロフィールを入力</Typography>

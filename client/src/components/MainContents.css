@@ -1,0 +1,56 @@
+.main-contents{
+    max-width: 1000px;
+    margin: 514px auto 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.smartphone-img{
+    width: 375px;
+    height: 800px;
+    margin-left: 40px;
+    background-image: url("../../img/smartPhoneImg.png");
+    background-size: cover;
+}
+
+.top-text{
+    max-width: 615px;
+    overflow-wrap: break-word;
+    margin: 250px 40px 0 97px;
+}
+
+.top-p-text{
+    font-size: 16px;
+}
+
+.main-text-button{
+    margin: auto;
+}
+
+.how-to{
+    margin-top: 50px;
+}
+
+.how-to-text{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bottom-button{
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+.flex-text{
+    margin: 0 10px;
+    display: flex;
+    justify-content:space-between
+}
+
+.each-text{
+    text-align: center;
+    max-width: 300px;
+    margin: 0 25px;
+}

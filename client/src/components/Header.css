@@ -1,7 +1,7 @@
 .header {
     height: 64px;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -9,8 +9,8 @@
     top: 0;
     left: 0;
     right: 0;
-    padding-left: calc((100% - 1120px) / 2);
-    padding-right: calc((100% - 1120px) / 2);
+    padding-left: calc((100% - 1000px) / 2);
+    padding-right: calc((100% - 1000px) / 2);
     background-color: white;
     z-index: 1000;
 }

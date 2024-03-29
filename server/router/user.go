@@ -10,8 +10,9 @@ import (
 // ReqUser型は文字列のNameをパラメーターとして持つ
 type ReqUser struct {
 	Name     string `json:"name"`
-	Address  string `json:"address"`
+	Email    string `json:"email"`
 	Country  string `json:"country"`
+	Duration string `json:"duration"`
 	Category string `json:"category"`
 	Question string `json:"question"`
 }
@@ -30,7 +31,7 @@ func AddUserHandler(c echo.Context) error {
 	}
 
 	// modelのAddUser関数を実行
-	user, err := model.AddUser(req.Name, req.Address, req.Country, req.Category, req.Question)
+	user, err := model.AddUser(req.Name, req.Email, req.Country, req.Duration, req.Category, req.Question)
 	if err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, "Bad Request")
 	}

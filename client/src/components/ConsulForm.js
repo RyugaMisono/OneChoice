@@ -1,7 +1,38 @@
 import { Card, CardContent, TextField, Typography, Button } from "@mui/material"
 import "./ConsulForm.css"
+import { useState } from "react"
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 function ConsulForm() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        country: "",
+        duration: "",
+        category: "",
+        question: ""
+    })
+
+    // POST成功後に画面遷移するためのオブジェクト
+    const navigate = useNavigate()
+
+    // userデータの追加
+    function handlePush() {
+        if (formData.email !== "") {
+            axios.post("http://localhost:8000/api/users", {
+                name: formData.name,
+                email: formData.email,
+                country: formData.country,
+                duration: formData.duration,
+                category: formData.category,
+                question: formData.question,
+            })
+            navigate("/")
+        }
+        console.log(formData)
+    }
+
     return (
         <div className="consul-form">
             <Typography variant="h4" fontWeight="bold" className="consul-title">留学相談を始める</Typography>
@@ -25,7 +56,9 @@ function ConsulForm() {
                             sx={{maxWidth: "400px"}} 
                             size="small"
                             placeholder="留学太郎"
-                            className="textfield"></TextField>
+                            className="textfield"
+                            value={formData.name}
+                            onChange={(e) => setFormData({...formData, name: e.target.value})}></TextField>
                         </div>
                         <div className="flex-form">
                             <div>
@@ -37,7 +70,9 @@ function ConsulForm() {
                             sx={{maxWidth: "400px"}} 
                             size="small"
                             placeholder="ryugaku@example.com"
-                            className="textfield"></TextField>
+                            className="textfield"
+                            value={formData.email}
+                            onChange={(e) => setFormData({...formData, email: e.target.value})}></TextField>
                         </div>
                         <div className="flex-form">
                             <div>
@@ -50,7 +85,9 @@ function ConsulForm() {
                             sx={{maxWidth: "400px"}} 
                             size="small"
                             placeholder="アメリカ、シアトル"
-                            className="textfield"></TextField>
+                            className="textfield"
+                            value={formData.country}
+                            onChange={(e) => setFormData({...formData, country: e.target.value})}></TextField>
                         </div>
                         <div className="flex-form">
                             <div>
@@ -63,20 +100,24 @@ function ConsulForm() {
                             sx={{maxWidth: "400px"}} 
                             size="small"
                             placeholder="4年間"
-                            className="textfield"></TextField>
+                            className="textfield"
+                            value={formData.duration}
+                            onChange={(e) => setFormData({...formData, duration: e.target.value})}></TextField>
                         </div>
                         <div className="flex-form">
                             <div>
                                 <Typography fontSize="16px" fontWeight="bold">留学のタイプ</Typography>
-                                <Typography fontSize="14px" color="gray">(〇年間、長期・短期など)</Typography>
+                                <Typography fontSize="14px" color="gray">(勉学、スポーツなど)</Typography>
                             </div>
                             <TextField 
                             variant="outlined" 
                             fullWidth 
                             sx={{maxWidth: "400px"}} 
                             size="small"
-                            placeholder="4年間"
-                            className="textfield"></TextField>
+                            placeholder="進学"
+                            className="textfield"
+                            value={formData.category}
+                            onChange={(e) => setFormData({...formData, category: e.target.value})}></TextField>
                         </div>
                         <div className="flex-form">
                             <div>
@@ -91,10 +132,17 @@ function ConsulForm() {
                             placeholder="〇〇はどうしたらいいですか？"
                             className="textfield"
                             multiline
-                            minRows="10"></TextField>
+                            minRows="10"
+                            value={formData.question}
+                            onChange={(e) => setFormData({...formData, question: e.target.value})}></TextField>
                         </div>
                         <div className="form-button">
-                            <Button variant="contained" disableElevation sx={{width: "200px"}}>送信する</Button>
+                            <Button 
+                            variant="contained" 
+                            disableElevation 
+                            sx={{width: "200px"}}
+                            onClick={handlePush}>
+                                送信する</Button>
                         </div>
                     </CardContent>
                 </Card>

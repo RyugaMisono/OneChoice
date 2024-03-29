@@ -8,14 +8,15 @@ import (
 type User struct {
 	ID       uuid.UUID
 	Name     string
-	Address  string
+	Email    string
 	Country  string
+	Duration string
 	Category string
 	Question string
 }
 
 // DBにuserを追加
-func AddUser(name, address, country, category, question string) (*User, error) {
+func AddUser(name, email, country, duration, category, question string) (*User, error) {
 
 	// 新たなuuidを生成
 	id, err := uuid.NewUUID()
@@ -27,8 +28,9 @@ func AddUser(name, address, country, category, question string) (*User, error) {
 	user := User{
 		ID:       id,
 		Name:     name,
-		Address:  address,
+		Email:    email,
 		Country:  country,
+		Duration: duration,
 		Category: category,
 		Question: question,
 	}

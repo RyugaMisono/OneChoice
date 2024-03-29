@@ -1,12 +1,15 @@
 import "./TopBar.css"
-import {Stack, Button} from "@mui/material"
+import {Button} from "@mui/material"
+import {Link} from "react-router-dom"
 
 function TopBar() {
     return (
         <div className="top-bar">
-            <Button className="button" variant="contained" disableElevation sx={{width: 200}}>
-                相談を始める(無料)
-            </Button>
+            <Link to="/start">
+                <Button className="button" variant="contained" disableElevation sx={{width: 200}}>
+                    相談を始める(無料)
+                </Button>
+            </Link>
         </div>
     )
 }

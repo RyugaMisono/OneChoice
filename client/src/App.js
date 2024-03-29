@@ -1,18 +1,19 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import MainContents from './components/MainContents';
-import MainText from './components/MainText';
-import TopBar from './components/TopBar';
-import TopMessage from './components/TopMessage';
+import Main from './components/Main';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import StartAdvice from './components/StartAdvice';
+import Advisor from './components/Advisor';
+import About from './components/About';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <TopBar />
-      <MainContents />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main/>} />
+        <Route path="start" element={<StartAdvice />}/>
+        <Route path="about" element={<About />}/>
+        <Route path="advisor" element={<Advisor />}/>
+      </Routes>
+    </Router>
   );
 }
 

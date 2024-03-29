@@ -1,5 +1,6 @@
 import { Button, Typography } from "@mui/material"
 import "./MainContents.css"
+import { Link } from "react-router-dom"
 
 function MainContents() {
     return (
@@ -19,7 +20,9 @@ function MainContents() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <Button variant="contained" disableElevation size="large" sx={{width: 200}} className="main-text-button">もっとくわしく</Button>
+                    <Link to="about">
+                        <Button variant="contained" disableElevation size="large" sx={{width: 200}} className="main-text-button">もっとくわしく</Button>
+                    </Link>
                 </div>
             </div>
             <div className="how-to">
@@ -46,7 +49,9 @@ function MainContents() {
                     </span>
                 </div>
                 <div className="bottom-button">
-                    <Button variant="contained" disableElevation size="large" sx={{width: 200}}>相談を始める(無料)</Button>
+                    <Link to="start">
+                        <Button variant="contained" disableElevation size="large" sx={{width: 200}}>相談を始める(無料)</Button>
+                    </Link>
                 </div>
             </div>
         </div>

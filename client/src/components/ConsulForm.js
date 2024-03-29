@@ -19,7 +19,7 @@ function ConsulForm() {
 
     // userデータの追加
     function handlePush() {
-        if (formData.email !== "") {
+        if (formData.name !== "" && formData.email !== "") {
             axios.post("http://localhost:8000/api/users", {
                 name: formData.name,
                 email: formData.email,
@@ -28,7 +28,7 @@ function ConsulForm() {
                 category: formData.category,
                 question: formData.question,
             })
-            navigate("/")
+            navigate("/success")
         }
         console.log(formData)
     }
@@ -42,12 +42,13 @@ function ConsulForm() {
                         <Typography>
                             入力内容を参考に最適なアドバイザーを選定いたします。<br></br>
                             まずはご自身の気持ちに正直に、現時点での希望を記入していただければと思います。<br></br>
-                            なお、不明な点や未定の項目はその旨をご記載いただけると幸いです。
+                            なお、不明な点や未定の項目はその旨をご記載いただけると幸いです。<br></br>
+                            (* が付いている項目は入力必須)
                         </Typography>
                         <br></br>
                         <div className="flex-form">
                             <div>
-                                <Typography fontSize="16px" fontWeight="bold">名前</Typography>
+                                <Typography fontSize="16px" fontWeight="bold">名前 *</Typography>
                                 <Typography fontSize="14px" color="gray">(ニックネーム可)</Typography>
                             </div>
                             <TextField 
@@ -62,7 +63,7 @@ function ConsulForm() {
                         </div>
                         <div className="flex-form">
                             <div>
-                                <Typography fontSize="16px" fontWeight="bold">メールアドレス</Typography>
+                                <Typography fontSize="16px" fontWeight="bold">メールアドレス *</Typography>
                             </div>
                             <TextField 
                             variant="outlined" 

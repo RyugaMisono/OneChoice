@@ -1,0 +1,25 @@
+テスト方法
+
+onechoice/server
+docker-compose up -d --build
+
+Dockerのserverのターミナルから
+go run main.go
+
+Postmanにて
+POST http://localhost:8000/api/users に
+Body:raw
+{
+    "name": "三輪丈馬",
+    "address": "jomamiwa@gmail.com",
+    "country": "アメリカ",
+    "category": "進学",
+    "question": "何も分からない"
+}
+
+send
+
+localhopst:4040からphpMyAdminを確認
+
+終了方法
+docker composes down

@@ -9,7 +9,7 @@ function ConsulForm() {
                 <Card variant="outlined">
                     <CardContent>
                         <Typography>
-                            入力内容を参考にあなたに最適なアドバイザーを選定いたします。<br></br>
+                            入力内容を参考に最適なアドバイザーを選定いたします。<br></br>
                             まずはご自身の気持ちに正直に、現時点での希望を記入していただければと思います。<br></br>
                             なお、不明な点や未定の項目はその旨をご記載いただけると幸いです。
                         </Typography>
@@ -68,19 +68,6 @@ function ConsulForm() {
                         <div className="flex-form">
                             <div>
                                 <Typography fontSize="16px" fontWeight="bold">留学のタイプ</Typography>
-                                <Typography fontSize="14px" color="gray">(勉学、スポーツなど)</Typography>
-                            </div>
-                            <TextField 
-                            variant="outlined" 
-                            fullWidth 
-                            sx={{maxWidth: "400px"}} 
-                            size="small"
-                            placeholder="大学進学"
-                            className="textfield"></TextField>
-                        </div>
-                        <div className="flex-form">
-                            <div>
-                                <Typography fontSize="16px" fontWeight="bold">留学の期間</Typography>
                                 <Typography fontSize="14px" color="gray">(〇年間、長期・短期など)</Typography>
                             </div>
                             <TextField 
@@ -94,7 +81,7 @@ function ConsulForm() {
                         <div className="flex-form">
                             <div>
                                 <Typography fontSize="16px" fontWeight="bold">不安点や疑問点、質問事項など</Typography>
-                                <Typography fontSize="14px" color="gray">(何でもお気軽に書いてください！)</Typography>
+                                <Typography fontSize="14px" color="gray">(何でもお気軽にお尋ねください！)</Typography>
                             </div>
                             <TextField 
                             variant="outlined" 

@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header';
 import MainContents from './components/MainContents';
 import MainText from './components/MainText';
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <TopBar />
       <MainContents />
+      <Footer />
     </div>
   );
 }

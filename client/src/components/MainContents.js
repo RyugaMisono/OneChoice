@@ -45,7 +45,9 @@ function MainContents() {
                         経験豊富なアドバイザーがあなたをサポートします！</Typography>
                     </span>
                 </div>
-                <Button variant="contained" disableElevation size="large" sx={{width: 200}} className="bottom-button">相談を始める(無料)</Button>
+                <div className="bottom-button">
+                    <Button variant="contained" disableElevation size="large" sx={{width: 200}}>相談を始める(無料)</Button>
+                </div>
             </div>
         </div>
     )

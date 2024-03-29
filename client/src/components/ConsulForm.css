@@ -1,0 +1,30 @@
+.consul-form{
+    max-width: 1000px;
+    margin: 64px auto 0 auto;
+}
+
+.consul-title{
+    padding-top: 32px;
+    text-align: center;
+}
+
+.card-form{
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+}
+
+.flex-form{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 0 30px 0;
+    border-bottom: 1px dotted gray;
+}
+
+.textfield{
+    margin: auto 0;
+}
+
+.form-button{
+    margin: 30px auto 0 auto;
+    text-align: center;
+}

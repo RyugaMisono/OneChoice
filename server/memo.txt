@@ -1,0 +1,24 @@
+テスト方法
+
+
+onechoice/serverにて
+docker-compose up -d --build
+
+Dockerのserverのターミナルから
+go run main.go
+
+onechoice/clientにて
+npm start
+
+相談を始める
+から情報を入力して送信
+
+localhopst:4040からphpMyAdminを確認
+
+
+終了方法
+Dockerのserverのターミナル&onechoice/clientにて
+ctrl+c
+
+onechoice/serverにて
+docker composes down

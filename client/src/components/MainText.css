@@ -1,0 +1,6 @@
+.main-text{
+    max-width: 1000px;
+    margin: calc(100vh) auto 0 auto;
+    background-color: #f1f1f1;
+    padding: 20px calc(50% - 500px);
+}

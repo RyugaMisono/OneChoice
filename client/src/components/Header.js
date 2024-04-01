@@ -46,14 +46,14 @@ function Header() {
                             }} variant="text">Adviser一覧
                         </Button>
                     </Link>
-                    <Button 
+                    {/* <Button 
                         sx={{ 
                             textTransform: "none",
                             fontSize: 16,
                             color: "black",
                             paddingLeft: 2
                         }} variant="text">よくあるご質問
-                    </Button>
+                    </Button> */}
                 </div>
             </Stack>
         </div>

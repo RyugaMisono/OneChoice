@@ -43,7 +43,7 @@ function Header() {
                                 fontSize: 16,
                                 color: "black",
                                 paddingLeft: 2
-                            }} variant="text">Adviser一覧
+                            }} variant="text">Advisor一覧
                         </Button>
                     </Link>
                     {/* <Button 

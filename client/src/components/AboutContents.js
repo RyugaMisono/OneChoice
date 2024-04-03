@@ -53,6 +53,11 @@ function AboutContents() {
                     気になることや不安なこと、分からないことなど何でもお尋ねください！<br></br>
                     経験豊富なアドバイザーがあなたをサポートします！
                     </Typography>
+                    <Link to="/start">
+                        <div className="about-button">
+                            <Button variant="contained" disableElevation size="large" sx={{width: 200}}>相談を始める(無料)</Button>
+                        </div>
+                    </Link>
                 </CardContent>
             </Card>
         </div>

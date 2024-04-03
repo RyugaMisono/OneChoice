@@ -5,16 +5,16 @@
 
 .about-title{
     text-align: center;
+    padding: 12px 0;
 }
 
 .about-sub-title{
-    margin-top: 24px;
-    padding-bottom: 8px;
+    padding: 12px 0 6px 0;
     border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 .about-goal-text{
-    margin-top: 18px;
+    padding-top: 12px;
 }
 
 .about-text{
@@ -32,4 +32,9 @@
 
 .about-how-title{
     padding-top: 12px;
+}
+
+.about-button{
+    margin: 36px auto 0 auto;
+    text-align: center;
 }

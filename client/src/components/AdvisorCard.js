@@ -25,15 +25,17 @@ function AdvisorCard({ name, nameRoma, location, duration, type, residence, majo
                             </Typography>
                             <Typography fontSize="16px" sx={{ marginTop: "6px" }}>
                                 コメント<br />
-                                {expanded ? comment : comment.slice(0, 42)}
+                                {expanded ? comment : comment.slice(0, 84)}
                             </Typography>
                             <Typography fontSize="16px" sx={{ marginTop: "6px" }}>
-                                {expanded ? 
-                                career.split('\n').map((line, index) => <div key={index}>{line}</div>) 
-                                : career.slice(0,0)}
                             </Typography>
-                            <Button onClick={() => setExpanded(!expanded)}>{expanded ? "閉じる" : "もっと見る"}</Button>
                         </div>
+                    </div> 
+                    <Typography fontSize="16px" sx={{marginTop: "6px"}}>
+                        {expanded && career.split('\n').map((line, index) => <div key={index}>{line}</div>)}
+                    </Typography>
+                    <div className="more-button">
+                        <Button onClick={() => setExpanded(!expanded)}>{expanded ? "閉じる" : "もっと見る"}</Button>
                     </div>
                 </CardContent>
             </Card>

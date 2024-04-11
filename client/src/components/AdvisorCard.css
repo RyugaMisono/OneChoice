@@ -20,3 +20,7 @@
     margin-left: 16px;
     overflow-wrap: break-word;
 }
+
+.more-button{
+    text-align: right;
+}

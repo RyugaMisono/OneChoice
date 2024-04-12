@@ -1,5 +1,5 @@
-import { Card, CardContent, TextField, Typography, Button } from "@mui/material"
-import "./AboutContents.css"
+import { Card, CardContent, Typography, Button } from "@mui/material"
+import "../../styles/AboutContents.css"
 import { Link } from "react-router-dom"
 
 function AboutContents() {

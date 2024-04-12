@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography, Button } from "@mui/material"
-import "./AdvisorCard.css"
+import "../../styles/AdvisorCard.css"
 import { useState } from "react"
 
 function AdvisorCard({ name, nameRoma, location, duration, type, residence, major, comment , career}) {

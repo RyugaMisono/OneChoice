@@ -1,5 +1,5 @@
 import { Card, CardContent, TextField, Typography, Button } from "@mui/material"
-import "./ConsulForm.css"
+import "../../styles/ConsulForm.css"
 import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"

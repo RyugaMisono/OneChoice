@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material"
 import AdvisorCard from "./AdvisorCard"
-import "./AdvisorList.css"
+import "../../styles/AdvisorList.css"
 
 function AdvisorList() {
     const advisors = [

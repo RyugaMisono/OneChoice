@@ -4,9 +4,12 @@
     width: 100%;
     height: 450px;
     background-image: url("../../img/topBar.jpg");
+    background-position: center;
 }
 
 .button{
-    top: 270px;
-    left: 583px;
+    position: absolute;
+    top: 60%; 
+    left: 50%;
+    transform: translate(-190%, -50%);
 }

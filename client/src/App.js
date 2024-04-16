@@ -1,9 +1,9 @@
-import Main from './components/Main';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import StartAdvice from './components/StartAdvice';
-import Advisor from './components/Advisor';
-import About from './components/About';
-import SuccessConsul from './components/SuccessConsul';
+import Main from './pages/top-page/Main'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import StartAdvice from './pages/consulting/StartAdvice'
+import Advisor from './pages/advoisor-list/Advisor'
+import About from './pages/about/About'
+import SuccessConsul from './pages/consulting/SuccessConsul'
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import "./TopBar.css"
+import "../../styles/TopBar.css"
 import {Button} from "@mui/material"
 import {Link} from "react-router-dom"
 

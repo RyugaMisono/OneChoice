@@ -1,5 +1,5 @@
 import { Button, Typography } from "@mui/material"
-import "./MainContents.css"
+import "../../styles/MainContents.css"
 import { Link } from "react-router-dom"
 
 function MainContents() {

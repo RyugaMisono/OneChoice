@@ -1,7 +1,11 @@
-import { Card, CardContent, Typography } from "@mui/material"
-import "./AdvisorCard.css"
+import { Card, CardContent, Typography, Button } from "@mui/material"
+import "../../styles/AdvisorCard.css"
+import { useState } from "react"
 
-function AdvisorCard({ name, nameRoma, location, duration, type, residence, major, comment }) {
+function AdvisorCard({ name, nameRoma, location, duration, type, residence, major, comment , career}) {
+
+    const [expanded, setExpanded] = useState(false)
+
     return (
         <div className="advisor-card">
             <Card variant="outlined">
@@ -21,9 +25,17 @@ function AdvisorCard({ name, nameRoma, location, duration, type, residence, majo
                             </Typography>
                             <Typography fontSize="16px" sx={{ marginTop: "6px" }}>
                                 コメント<br />
-                                {comment}
+                                {expanded ? comment : comment.slice(0, 84)}
+                            </Typography>
+                            <Typography fontSize="16px" sx={{ marginTop: "6px" }}>
                             </Typography>
                         </div>
+                    </div> 
+                    <Typography fontSize="16px" sx={{marginTop: "6px"}}>
+                        {expanded && career.split('\n').map((line, index) => <div key={index}>{line}</div>)}
+                    </Typography>
+                    <div className="more-button">
+                        <Button onClick={() => setExpanded(!expanded)}>{expanded ? "閉じる" : "もっと見る"}</Button>
                     </div>
                 </CardContent>
             </Card>

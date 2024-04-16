@@ -1,0 +1,11 @@
+Firebaseへのデプロイ方法
+
+1.firebase init で設定 (２回目以降はパス)
+Hosting: Configure...
+public directory: build
+rewrite all urls: yes
+overwrite: No
+
+2.npm run build
+
+3.firebase deploy

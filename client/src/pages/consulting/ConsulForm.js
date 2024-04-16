@@ -1,8 +1,9 @@
 import { Card, CardContent, TextField, Typography, Button } from "@mui/material"
 import "../../styles/ConsulForm.css"
 import { useState } from "react"
-import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { db } from "../../firebase"
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 function ConsulForm() {
     const [formData, setFormData] = useState({
@@ -18,19 +19,19 @@ function ConsulForm() {
     const navigate = useNavigate()
 
     // userデータの追加
-    function handlePush() {
+    async function handlePush() {
         if (formData.name !== "" && formData.email !== "") {
-            axios.post("http://localhost:8000/api/users", {
+            await addDoc(collection(db, 'profile'), {
                 name: formData.name,
                 email: formData.email,
                 country: formData.country,
                 duration: formData.duration,
                 category: formData.category,
                 question: formData.question,
+                timestamp: serverTimestamp(),
             })
             navigate("/success")
         }
-        console.log(formData)
     }
 
     return (

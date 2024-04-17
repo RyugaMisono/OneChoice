@@ -40,16 +40,19 @@ function AdvisorList() {
     ]
 
     return (
-        <div className="advisor-list">
-            <Typography variant="h4" fontWeight="bold" className="advisor-title">
-                Advisor一覧
-            </Typography>
-            <div className="advisor-cards">
-                {advisors.map((advisor, index) => (
-                    <AdvisorCard key={index} {...advisor} />
-                ))}
+        <div className="bg-advisors">
+            <div className="advisor-list">
+                <Typography variant="h4" fontWeight="bold" className="advisor-title">
+                    Advisor一覧
+                </Typography>
+                <div className="advisor-cards">
+                    {advisors.map((advisor, index) => (
+                        <AdvisorCard key={index} {...advisor} />
+                    ))}
+                </div>
             </div>
         </div>
+        
     )
 }
 

@@ -57,6 +57,11 @@
 }
 
 .bottom-button{
-    margin: 20px auto 10px auto;
+    margin: 20px auto 0 auto;
     text-align: center;
+    padding-bottom: 20px;
+}
+
+.bg-main{
+    background-color: #f8fbff;
 }

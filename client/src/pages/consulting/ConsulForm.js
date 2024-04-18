@@ -3,7 +3,7 @@ import "../../styles/ConsulForm.css"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { db } from "../../firebase"
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
 function ConsulForm() {
     const [formData, setFormData] = useState({

@@ -11,15 +11,15 @@ function Main() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 1024);
-        };
+            setIsSmallScreen(window.innerWidth <= 1024)
+        }
 
-        window.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize)
 
         return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    },);
+            window.removeEventListener("resize", handleResize)
+        }
+    },)
 
     return (
         <div>

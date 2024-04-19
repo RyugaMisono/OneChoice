@@ -3,6 +3,7 @@ import HeaderSp from "../../components/HeaderSp"
 import Footer from "../../components/Footer"
 import TopBar from "./TopBar"
 import MainContents from "./MainContents"
+import MainContentsSp from "./MainContentsSp"
 import React, { useState, useEffect } from "react"
 
 function Main() {
@@ -24,7 +25,7 @@ function Main() {
         <div>
             {isSmallScreen ? <HeaderSp /> : <Header />}
             <TopBar />
-            <MainContents />
+            {isSmallScreen ? <MainContentsSp /> : <MainContents />}
             <Footer />
         </div>
     )

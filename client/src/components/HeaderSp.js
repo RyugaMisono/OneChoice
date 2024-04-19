@@ -1,11 +1,16 @@
 import "../styles/Header.css"
-import {Stack, Button, Drawer} from "@mui/material"
+import {Stack, Button, Drawer, IconButton} from "@mui/material"
 import { useState } from "react"
 import {Link} from "react-router-dom"
 import DrawerMenu from "./DrawerMenu"
+import MenuIcon from '@mui/icons-material/Menu'
 
 function HeaderSp() {
     const [drawerOpened, setDrawerOpened] = useState(false)
+
+    const closeDrawer = () => {
+        setDrawerOpened(false);
+    }
 
     return (
         <div className="header">
@@ -15,55 +20,18 @@ function HeaderSp() {
                         sx={{ 
                             textTransform: "none",
                             fontSize: 20,
-                            color: "black"
+                            color: "black",
+                            paddingLeft: "24px"
                         }} variant="text">OneChoice
                     </Button>
                 </Link>
                 <div className="right-items">
-                    <Link to="/start">
-                        <Button 
-                            sx={{ 
-                                textTransform: "none",
-                                fontSize: 16,
-                                color: "black",
-                                paddingLeft: 2
-                            }} variant="text">相談を始める
-                        </Button>
-                    </Link>
-                    <Link to="/about">
-                        <Button 
-                            sx={{ 
-                                textTransform: "none",
-                                fontSize: 16,
-                                color: "black",
-                                paddingLeft: 2
-                            }} variant="text">OneChoiceとは
-                        </Button>
-                    </Link>
-                    <Link to="/advisor">
-                        <Button 
-                            sx={{ 
-                                textTransform: "none",
-                                fontSize: 16,
-                                color: "black",
-                                paddingLeft: 2
-                            }} variant="text">Advisor一覧
-                        </Button>
-                    </Link>
-                    <Button onClick={() => setDrawerOpened(true)}>
-                        drawer
-                    </Button>
+                    <IconButton onClick={() => setDrawerOpened(true)} sx={{paddingRight: "24px"}}>
+                        <MenuIcon />
+                    </IconButton>
                     <Drawer anchor={"right"} open={drawerOpened} onClose={() => setDrawerOpened(false)}>
-                        <DrawerMenu />
+                        <DrawerMenu onClose={closeDrawer}/>
                     </Drawer>
-                    {/* <Button 
-                        sx={{ 
-                            textTransform: "none",
-                            fontSize: 16,
-                            color: "black",
-                            paddingLeft: 2
-                        }} variant="text">よくあるご質問
-                    </Button> */}
                 </div>
             </Stack>
         </div>

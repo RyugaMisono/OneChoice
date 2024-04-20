@@ -1,11 +1,11 @@
 .main-contents-sp{
-    margin-top: 64px;
+    margin-top: 50%;
 }
 
 .smartphone-img-sp{
     width: 375px;
     height: 800px;
-    margin: 0px auto;
+    margin: 0 auto;
     background-image: url("../../img/smartPhoneImg.png");
     background-size: cover;
 }

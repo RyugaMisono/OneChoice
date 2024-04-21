@@ -1,8 +1,12 @@
 import { Typography } from "@mui/material"
 import AdvisorCard from "./AdvisorCard"
+import AdvisorCardSp from "./AdvisorCardSp"
 import "../../styles/AdvisorList.css"
+import React, { useState, useEffect } from "react"
+
 
 function AdvisorList() {
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 700)
     const advisors = [
         {
             name: "弥園 立我",
@@ -34,10 +38,22 @@ function AdvisorList() {
             type: "進学",
             residence: "ホームステイ",
             major: "何か",
-            comment: "良い感じのコメント",
+            comment: "良い感じのコメントをツラツラ書いていきましょう",
             career: "経歴\n test"
         }
     ]
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth <= 700)
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    },)
 
     return (
         <div className="bg-advisors">
@@ -47,7 +63,7 @@ function AdvisorList() {
                 </Typography>
                 <div className="advisor-cards">
                     {advisors.map((advisor, index) => (
-                        <AdvisorCard key={index} {...advisor} />
+                        isSmallScreen ? <AdvisorCardSp key={index} {...advisor} /> : <AdvisorCard key={index} {...advisor}/>
                     ))}
                 </div>
             </div>

@@ -2,12 +2,27 @@ import { Typography, Button } from "@mui/material"
 import {Link} from "react-router-dom"
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
+import HeaderSp from "../../components/HeaderSp"
 import "../../styles/SuccessConsul.css"
+import React, { useState, useEffect } from "react"
 
 function SuccessConsul() {
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024)
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth <= 1024)
+        }
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    },)
     return (
         <div>
-            <Header />
+            {isSmallScreen ? <HeaderSp /> : <Header />}
             <div className="success-text">
                 <Typography variant="h5" fontWeight="bold">
                     相談内容を送信しました。

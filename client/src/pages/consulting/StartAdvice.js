@@ -3,6 +3,7 @@ import Header from "../../components/Header"
 import HeaderSp from "../../components/HeaderSp"
 import ConsulForm from "./ConsulForm"
 import React, { useState, useEffect } from "react"
+import ConsulFormSp from "./ConsulFormSp"
 
 function StartAdvice() {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024)
@@ -21,7 +22,7 @@ function StartAdvice() {
     return (
         <div>
             {isSmallScreen ? <HeaderSp /> : <Header />}
-            <ConsulForm />
+            {isSmallScreen ? <ConsulFormSp /> : <ConsulForm />}
             <Footer />
         </div>
     )

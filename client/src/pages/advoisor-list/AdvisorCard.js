@@ -2,7 +2,7 @@ import { Card, CardContent, Typography, Button } from "@mui/material"
 import "../../styles/AdvisorCard.css"
 import { useState } from "react"
 
-function AdvisorCard({ name, nameRoma, location, duration, type, residence, major, comment , career}) {
+function AdvisorCard({ name, nameRoma, location, duration, type, residence, major, comment , career, imgUrl}) {
 
     const [expanded, setExpanded] = useState(false)
 
@@ -11,7 +11,7 @@ function AdvisorCard({ name, nameRoma, location, duration, type, residence, majo
             <Card variant="outlined">
                 <CardContent>
                     <div className="flex">
-                        <div className="profile-img"></div>
+                    <div className="profile-img" style={{ backgroundImage: `url(${imgUrl})` }}></div>
                         <div className="advisor-profile">
                             <Typography variant="h5" sx={{ marginBottom: "8px" }}>
                                 {name} ({nameRoma})

@@ -1,10 +1,11 @@
 .top-bar-sp {
     position: absolute;
-    top: 10%;
+    top: 9%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 100%;
     height: auto;
+    background-color: #f8fbff;
 }
 
 .top-bar-image {

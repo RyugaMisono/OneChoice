@@ -3,6 +3,7 @@ import Header from "../../components/Header"
 import HeaderSp from "../../components/HeaderSp"
 import AboutContents from "./AboutContents"
 import React, { useState, useEffect } from "react"
+import AboutContentsSp from "./AboutContentsSp"
 
 
 function About() {
@@ -24,7 +25,7 @@ function About() {
     return (
         <div>
             {isSmallScreen ? <HeaderSp /> : <Header />}
-            <AboutContents />
+            {isSmallScreen ? <AboutContentsSp /> : <AboutContents />}
             <Footer />
         </div>
     )

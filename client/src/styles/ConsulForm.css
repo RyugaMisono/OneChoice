@@ -1,6 +1,6 @@
 .consul-form{
     max-width: 1000px;
-    margin: 64px auto 0 auto;
+    margin: 64px auto 0px auto;
 }
 
 .consul-title{
@@ -27,4 +27,8 @@
 .form-button{
     margin: 30px auto 0 auto;
     text-align: center;
+}
+
+.bg-consul{
+    background-color: #f8fbff;
 }

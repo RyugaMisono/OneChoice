@@ -2,11 +2,11 @@ import { Card, CardContent, Typography, Button } from "@mui/material"
 import "../../styles/AboutContents.css"
 import { Link } from "react-router-dom"
 
-function AboutContents() {
+function AboutContentsSp() {
     return (
         <div className="bg-about">
             <div className="about-contents">
-                <Card variant="outlined">
+                <Card variant="outlined" sx={{margin: "10px"}}>
                     <CardContent>
                         <Typography variant="h4" fontWeight="bold" className="about-title">
                             OneChoiceとは
@@ -67,4 +67,4 @@ function AboutContents() {
     )
 }
 
-export default AboutContents
+export default AboutContentsSp

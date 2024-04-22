@@ -1,0 +1,30 @@
+.main-contents-sp{
+    margin-top: 47%;
+    background-color: #f8fbff;
+}
+
+.smartphone-img-sp{
+    width: 375px;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url("../../img/smartPhoneImg.png");
+    background-size: cover;
+}
+
+.top-text-sp{
+    margin-top: 48px;
+    text-align: center;
+}
+
+.main-text-button-sp{
+    margin: auto;
+}
+
+.how-to-sp{
+    margin-top: 48px;
+    text-align: center;
+}
+
+.p-text-sp{
+    margin: 12px 12px 0 12px;
+}

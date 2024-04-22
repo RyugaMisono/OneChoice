@@ -1,0 +1,20 @@
+
+
+.advisor-card-sp{
+    max-width: 350px;
+    margin: 24px auto 0 auto;
+}
+
+.advisor-profile-sp{
+    max-width: 350px;
+    margin: 5px 0 5px 0;
+    overflow-wrap: break-word;
+}
+
+.more-button{
+    text-align: right;
+}
+
+.career-sp{
+    margin: 16px 16px 0 16px;
+}

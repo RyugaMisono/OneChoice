@@ -30,6 +30,7 @@ function ConsulForm() {
                 question: formData.question,
                 timestamp: serverTimestamp(),
             })
+            console.log("aa")
             navigate("/success")
         }
     }

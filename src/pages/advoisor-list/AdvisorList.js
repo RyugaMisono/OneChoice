@@ -18,7 +18,19 @@ function AdvisorList() {
             major: "Computer Science",
             comment: "こんにちは！コミカレ、日本への編入を経験してます。アメリカでの運転免許取得や課外活動など色んな質問に対応できます！",
             career: "経歴\n 2018/3 大阪府立和泉高等学校 グローバル科 卒業\n 2019/1 Seattle Central College 入学\n 2019/9 Bellevue College Associate Arts & Sciences, Computer Science 1年次編入\n 2022/1 Temple University Japan Campus Liberal Arts, General Studies 3年次編入",
-            imgUrl: "./img/ryuga.jpg"
+            imgUrl: "./img/ryuga.png"
+        },
+        {
+            name: "中濱 颯太",
+            nameRoma: "Nakahama Sota",
+            location: "アメリカ(ユタ州)",
+            duration: "長期(2年間)",
+            type: "進学",
+            residence: "寮、ホームステイ",
+            major: "Mechanical Engineering",
+            comment: "高校卒業後の２年のギャップイヤーや奨学金など費用面の相談にも対応できます。また、海外で就職を考えている方のサポートも行えます。",
+            career: "経歴\n 2018/3 大阪府立和泉高等学校 グローバル科 卒業\n 2020/1 Southern Utah University 入学\n 2022/5 Southern Utah University Research Assistant, Academic Tutor\n 2023/8 Talos Engineering（ワシントン州） 就職",
+            imgUrl: "./img/sota.jpg"
         },
         {
             name: "三輪 丈馬",
